@@ -1,18 +1,16 @@
 <template>
   <div id="app" class="container">
-    <router-view></router-view>
+    <owl-carousel />
   </div>
 </template>
 
 <script>
+import OwlCarousel from './components/OwlCarousel.vue'
+
 export default {
   name: 'App',
   components: {
+    OwlCarousel
   },
-  data() {
-    return {
-      
-    }
-  }
 }
 </script>

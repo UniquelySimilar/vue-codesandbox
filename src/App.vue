@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <owl-carousel />
+    <place-holder />
   </div>
 </template>
 
 <script>
-import OwlCarousel from './components/OwlCarousel.vue'
+  import PlaceHolder from '@/components/PlaceHolder'
 
-export default {
-  name: 'App',
-  components: {
-    OwlCarousel
-  },
-}
+  export default {
+    name: 'App',
+    components: {
+      PlaceHolder
+    },
+  }
 </script>

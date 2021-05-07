@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <place-holder />
+    <parent />
   </div>
 </template>
 
 <script>
-  import PlaceHolder from '@/components/PlaceHolder'
+  import Parent from '@/components/current/Parent'
 
   export default {
     name: 'App',
     components: {
-      PlaceHolder
+      Parent
     },
   }
 </script>

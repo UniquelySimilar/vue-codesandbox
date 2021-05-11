@@ -2,32 +2,26 @@
   <div class="parent">
     <h4>Parent</h4>
     <hr>
-    <child v-if="user" :userProp="user"/>
+    <div class="row">
+      <div class="col-md-6">
+        <list-view :items="items" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-  import axios from 'axios'
-  import Child from './Child.vue'
+  import items from './items.js'
+  import ListView from './ListView.vue'
 
   export default {
     components: {
-      Child
+      ListView
     },
     data() {
       return {
-        user: null
+        items
       }
-    },
-    methods: {
-      getUser() {
-        axios.get('https://jsonplaceholder.typicode.com/users/1')
-          .then(response => this.user = response.data)
-          .catch(error => console.log(error));
-      }
-    },
-    created() {
-      this.getUser();
     }
   }
 </script>
